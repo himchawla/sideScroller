@@ -16,6 +16,9 @@
 		93672A4E2673A3A8004A8855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93672A4D2673A3A8004A8855 /* Assets.xcassets */; };
 		93672A592673A3A9004A8855 /* sideScrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A582673A3A9004A8855 /* sideScrollerTests.swift */; };
 		93672A642673A3A9004A8855 /* sideScrollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A632673A3A9004A8855 /* sideScrollerUITests.swift */; };
+		93B0E0722673A81300A58E36 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93B0E0712673A81300A58E36 /* TileSet.sks */; };
+		93B0E0742673B17400A58E36 /* inputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0E0732673B17400A58E36 /* inputManager.swift */; };
+		93B0E0762673B2F200A58E36 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0E0752673B2F200A58E36 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		93672A5F2673A3A9004A8855 /* sideScrollerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sideScrollerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93672A632673A3A9004A8855 /* sideScrollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideScrollerUITests.swift; sourceTree = "<group>"; };
 		93672A652673A3A9004A8855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93B0E0712673A81300A58E36 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
+		93B0E0732673B17400A58E36 /* inputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputManager.swift; sourceTree = "<group>"; };
+		93B0E0752673B2F200A58E36 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +109,15 @@
 			children = (
 				93672A402673A3A5004A8855 /* AppDelegate.swift */,
 				93672A422673A3A5004A8855 /* GameScene.sks */,
+				93B0E0712673A81300A58E36 /* TileSet.sks */,
 				93672A442673A3A5004A8855 /* Actions.sks */,
 				93672A462673A3A5004A8855 /* GameScene.swift */,
 				93672A482673A3A5004A8855 /* GameViewController.swift */,
 				93672A4A2673A3A5004A8855 /* Main.storyboard */,
 				93672A4D2673A3A8004A8855 /* Assets.xcassets */,
 				93672A4F2673A3A8004A8855 /* Info.plist */,
+				93B0E0732673B17400A58E36 /* inputManager.swift */,
+				93B0E0752673B2F200A58E36 /* Player.swift */,
 			);
 			path = sideScroller;
 			sourceTree = "<group>";
@@ -238,6 +247,7 @@
 				93672A432673A3A5004A8855 /* GameScene.sks in Resources */,
 				93672A4E2673A3A8004A8855 /* Assets.xcassets in Resources */,
 				93672A452673A3A5004A8855 /* Actions.sks in Resources */,
+				93B0E0722673A81300A58E36 /* TileSet.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93B0E0742673B17400A58E36 /* inputManager.swift in Sources */,
 				93672A472673A3A5004A8855 /* GameScene.swift in Sources */,
 				93672A492673A3A5004A8855 /* GameViewController.swift in Sources */,
+				93B0E0762673B2F200A58E36 /* Player.swift in Sources */,
 				93672A412673A3A5004A8855 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
