@@ -1,18 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "grass6.png",
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "scale" : "1x"
     },
     {
-      "filename" : "grass7.png",
-      "idiom" : "universal",
+      "filename" : "grass2.png",
+      "idiom" : "iphone",
       "scale" : "2x"
     },
     {
-      "filename" : "grass8.png",
-      "idiom" : "universal",
+      "idiom" : "iphone",
       "scale" : "3x"
     }
   ],
