@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34DE02512676EF10002A208F /* AnimationTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34DE02502676EF10002A208F /* AnimationTiles.sks */; };
 		93672A412673A3A5004A8855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A402673A3A5004A8855 /* AppDelegate.swift */; };
 		93672A432673A3A5004A8855 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93672A422673A3A5004A8855 /* GameScene.sks */; };
 		93672A452673A3A5004A8855 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93672A442673A3A5004A8855 /* Actions.sks */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34DE02502676EF10002A208F /* AnimationTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnimationTiles.sks; sourceTree = "<group>"; };
 		93672A3D2673A3A5004A8855 /* sideScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sideScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93672A402673A3A5004A8855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93672A422673A3A5004A8855 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				93672A482673A3A5004A8855 /* GameViewController.swift */,
 				93672A4A2673A3A5004A8855 /* Main.storyboard */,
 				93672A4D2673A3A8004A8855 /* Assets.xcassets */,
+				34DE02502676EF10002A208F /* AnimationTiles.sks */,
 				93672A4F2673A3A8004A8855 /* Info.plist */,
 				93B0E0732673B17400A58E36 /* inputManager.swift */,
 				93B0E0752673B2F200A58E36 /* Player.swift */,
@@ -246,6 +249,7 @@
 				93672A4C2673A3A5004A8855 /* Main.storyboard in Resources */,
 				93672A432673A3A5004A8855 /* GameScene.sks in Resources */,
 				93672A4E2673A3A8004A8855 /* Assets.xcassets in Resources */,
+				34DE02512676EF10002A208F /* AnimationTiles.sks in Resources */,
 				93672A452673A3A5004A8855 /* Actions.sks in Resources */,
 				93B0E0722673A81300A58E36 /* TileSet.sks in Resources */,
 			);
@@ -447,6 +451,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA996MYYKU;
 				INFOPLIST_FILE = sideScroller/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA996MYYKU;
 				INFOPLIST_FILE = sideScroller/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
