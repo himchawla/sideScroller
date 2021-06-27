@@ -18,7 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         static let boundary: UInt32 = 0b1000;
     }
     
-    
+    var hud:HUD = HUD();
     var m_player:player = player();
     var m_sprite:SKTileGroupRule!;
     var deltaTime:Float = 0.0;
@@ -29,8 +29,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     private var label : SKLabelNode?
     private var spinnyNode : SKShapeNode?
     
-    override func didMove(to view: SKView) {
+    override func didMove(to view: SKView)
+    {
+        self.addChild(hud.m_livesLabel);
+        self.addChild(hud.m_timerLabel);
         self.addChild(m_player.CreateShape());
+    
+        self.camera = m_player.CreateCamera();
+        self.addChild(m_player.camera);
+        var swipeGestureRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(swipe));
+        swipeGestureRecognizer.direction = .up;
+        //longPressGestureRecognizer.minimumPressDuration = 0.0;
+        view.addGestureRecognizer(swipeGestureRecognizer);
         
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
         self.physicsBody?.categoryBitMask = CategoryBitMask.boundary;
@@ -64,26 +74,69 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    @objc func swipe(sender: UISwipeGestureRecognizer)
+    {
+        if(sender.location(in: self.view).x > 600.0)
+        {
+            m_player.Jump();
+            
+        }
+    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches{
-            if touch.location(in: self.view).x < 200
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        for touch in touches
+        {
+            var tapLocation = touch.location(in: self.view);
+            if(tapLocation.x < 200)
             {
-                m_player.move(x: -200,y: 0);
-            }
-            else if touch.location(in: self.view).x < 400
-            {
-                m_player.move(x: 200,y: 0);
+                m_player.move(x: -400, y: 0);
             }
             
-            else{
-                m_player.move(x: 0,y: 700);
-        
+            else if(tapLocation.x < 400)
+            {
+                m_player.move(x: 400, y: 0);
+            }
+            
+            else
+            {
+               // m_player.move(x: 0.0, y: 700.0);
             }
         }
     }
     
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?)
+    {
+        for touch in touches
+        {
+            var tapLocation = touch.location(in: self.view);
+            if(tapLocation.x < 200)
+            {
+                m_player.move(x: -400, y: 0);
+            }
+            
+            else if(tapLocation.x < 400)
+            {
+                m_player.move(x: 400, y: 0);
+            }
+            else
+            {
+                //m_player.move(x: 0.0, y: 700.0);
+            }
+            
+        }
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        m_player.move(x: 0.001, y: 0.0)
+    }
+    
+    
+    
     override func update(_ currentTime: TimeInterval) {
         deltaTime = Float(currentTime - lastUpdateTime);
+        
+        m_player.Update(dt: deltaTime);
+        hud.Update(deltaTime: deltaTime, camera: m_player.camera);
     }
 }

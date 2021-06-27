@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		34DE02512676EF10002A208F /* AnimationTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34DE02502676EF10002A208F /* AnimationTiles.sks */; };
+		932ED7AD2688E8520051D996 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED7AC2688E8520051D996 /* Camera.swift */; };
+		932ED7AF2688F36D0051D996 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED7AE2688F36D0051D996 /* HUD.swift */; };
 		93672A412673A3A5004A8855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A402673A3A5004A8855 /* AppDelegate.swift */; };
 		93672A432673A3A5004A8855 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93672A422673A3A5004A8855 /* GameScene.sks */; };
 		93672A452673A3A5004A8855 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93672A442673A3A5004A8855 /* Actions.sks */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		34DE02502676EF10002A208F /* AnimationTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnimationTiles.sks; sourceTree = "<group>"; };
+		932ED7AC2688E8520051D996 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		932ED7AE2688F36D0051D996 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		93672A3D2673A3A5004A8855 /* sideScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sideScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93672A402673A3A5004A8855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93672A422673A3A5004A8855 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				93672A4F2673A3A8004A8855 /* Info.plist */,
 				93B0E0732673B17400A58E36 /* inputManager.swift */,
 				93B0E0752673B2F200A58E36 /* Player.swift */,
+				932ED7AC2688E8520051D996 /* Camera.swift */,
+				932ED7AE2688F36D0051D996 /* HUD.swift */,
 			);
 			path = sideScroller;
 			sourceTree = "<group>";
@@ -278,7 +284,9 @@
 			files = (
 				93B0E0742673B17400A58E36 /* inputManager.swift in Sources */,
 				93672A472673A3A5004A8855 /* GameScene.swift in Sources */,
+				932ED7AD2688E8520051D996 /* Camera.swift in Sources */,
 				93672A492673A3A5004A8855 /* GameViewController.swift in Sources */,
+				932ED7AF2688F36D0051D996 /* HUD.swift in Sources */,
 				93B0E0762673B2F200A58E36 /* Player.swift in Sources */,
 				93672A412673A3A5004A8855 /* AppDelegate.swift in Sources */,
 			);
@@ -448,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA996MYYKU;
 				INFOPLIST_FILE = sideScroller/Info.plist;
@@ -458,6 +467,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = thunderGame.sideScroller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -468,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA996MYYKU;
 				INFOPLIST_FILE = sideScroller/Info.plist;
@@ -478,6 +489,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = thunderGame.sideScroller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
