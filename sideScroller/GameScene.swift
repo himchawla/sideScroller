@@ -8,6 +8,36 @@
 import SpriteKit
 import GameplayKit
 
+class coin
+{
+    enum CategoryBitMask{
+        static let redNode: UInt32 = 0b001;
+        static let blueNode: UInt32 = 0b0010;
+        static let obstacle: UInt32 = 0b0011;
+        static let boundary: UInt32 = 0b1000;
+    }
+    var textures:[SKTexture] = []
+    var shape: SKSpriteNode!
+    func CreateShape(_position:CGPoint) -> SKSpriteNode
+    {
+        shape = SKSpriteNode(imageNamed: "coin1")
+        shape.anchorPoint = CGPoint(x: 0.5,y: 0.5)
+        shape.scale(to: CGSize(width: 64, height: 64))
+        shape.position = _position
+        
+
+        let textureAtlas = SKTextureAtlas(named: "coin")
+       
+        for i in 2...6
+        {
+            textures.append(SKTexture(imageNamed: "coin\(i)"))
+            print("coin\(i).png")
+        }
+        return shape;
+        
+    }
+}
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
@@ -19,6 +49,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     var doorActive:Bool = false;
     
+    var m_coins:[coin] = [];
     var hud:HUD = HUD();
     var m_player:player = player();
     var m_sprite:SKTileGroupRule!;
@@ -33,7 +64,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let left = SKSpriteNode()
     let jumpAudioNode = SKAudioNode(fileNamed: "Jump.wav");
     var m_emitter:SKEmitterNode!
-    
+    var m_coin:SKSpriteNode!
    
     
     override func didMove(to view: SKView)
@@ -41,6 +72,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         self.listener = m_player;
         
+       
+        let tempCoin = coin()
+        self.addChild(tempCoin.CreateShape(_position: CGPoint(x: 500, y: 500)))
+        
+        tempCoin.shape.run(SKAction.repeatForever(SKAction.animate(with:tempCoin.textures, timePerFrame: 0.2)))
+        m_coins.append(tempCoin)
+
         self.addChild(hud.m_livesLabel);
         self.addChild(hud.m_scoreLabel);
         self.addChild(hud.m_left);
@@ -205,14 +243,34 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     override func update(_ currentTime: TimeInterval) {
         deltaTime = Float(currentTime - lastUpdateTime);
         
-        if(!doorActive && hud.m_lives == 1)
+        if(!doorActive && m_coins.count == 0)
     
         {
             doorActive = true;
             addDoorway();
         }
-        
-        
+        var i:Int = 0
+        for coin in m_coins
+        {
+            
+            if(coin.shape.position.x - m_player.shape.position.x < 64 && (coin.shape.position.y - m_player.shape.position.y) < 64)
+            {
+                if let coinEffect = SKEmitterNode(fileNamed: "Coin")
+                {
+                    coinEffect.position = coin.shape.position
+                    self.addChild(coinEffect)
+                    
+                    coinEffect.run(SKAction.sequence([SKAction.wait(forDuration: 2.5), (SKAction.removeFromParent())]));
+                }
+                
+                coin.shape.removeFromParent();
+                
+                m_coins.remove(at: i)
+                hud.increaseScore()
+                break;
+            }
+            i += 1;
+        }
         
         m_player.Update(dt: deltaTime);
         hud.Update(deltaTime: deltaTime, camera: m_player.camera);

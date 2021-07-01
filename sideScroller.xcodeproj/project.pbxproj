@@ -20,6 +20,7 @@
 		93672A4E2673A3A8004A8855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93672A4D2673A3A8004A8855 /* Assets.xcassets */; };
 		93672A592673A3A9004A8855 /* sideScrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A582673A3A9004A8855 /* sideScrollerTests.swift */; };
 		93672A642673A3A9004A8855 /* sideScrollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A632673A3A9004A8855 /* sideScrollerUITests.swift */; };
+		936DDB4E268E866300343C9F /* Coin.sks in Resources */ = {isa = PBXBuildFile; fileRef = 936DDB4D268E866300343C9F /* Coin.sks */; };
 		936E03CD268D961F0052B54C /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 936E03CC268D961E0052B54C /* left.png */; };
 		936E03CF268DA49F0052B54C /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 936E03CE268DA49E0052B54C /* right.png */; };
 		936E03D1268DA9720052B54C /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 936E03D0268DA9720052B54C /* Audio */; };
@@ -66,6 +67,7 @@
 		93672A5F2673A3A9004A8855 /* sideScrollerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sideScrollerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93672A632673A3A9004A8855 /* sideScrollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideScrollerUITests.swift; sourceTree = "<group>"; };
 		93672A652673A3A9004A8855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		936DDB4D268E866300343C9F /* Coin.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Coin.sks; sourceTree = "<group>"; };
 		936E03CC268D961E0052B54C /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = left.png; path = sideScroller/left.png; sourceTree = "<group>"; };
 		936E03CE268DA49E0052B54C /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = right.png; path = sideScroller/right.png; sourceTree = "<group>"; };
 		936E03D0268DA9720052B54C /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				932ED7AC2688E8520051D996 /* Camera.swift */,
 				932ED7AE2688F36D0051D996 /* HUD.swift */,
 				935D1B47268DD68B0039EDF3 /* Magic.sks */,
+				936DDB4D268E866300343C9F /* Coin.sks */,
 			);
 			path = sideScroller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936DDB4E268E866300343C9F /* Coin.sks in Resources */,
 				936E03D1268DA9720052B54C /* Audio in Resources */,
 				93672A4C2673A3A5004A8855 /* Main.storyboard in Resources */,
 				93672A432673A3A5004A8855 /* GameScene.sks in Resources */,
