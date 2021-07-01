@@ -10,6 +10,13 @@ import SpriteKit;
 
 class player:SKNode {
     
+    var sendersMessage: NSString = NSString()
+
+    var hud:HUD!
+    
+    public var m_respawnPosition = CGPoint(x: 1266.001, y: 585)
+
+    
     var shape:SKSpriteNode!;
     var body:SKPhysicsBody!;
     var m_isGrounded:Bool = false;
@@ -33,7 +40,7 @@ class player:SKNode {
 
     func CreateShape() -> SKSpriteNode
     {
-
+       
         shape = SKSpriteNode(imageNamed: "tile001")
         shape.position = CGPoint(x: 300, y:700);
         shape.scale(to: CGSize(width: 64.0, height: 64.0))
@@ -52,21 +59,41 @@ class player:SKNode {
     func move(x: Float,y: Float)
     {
         shape.physicsBody?.velocity.dx = CGFloat(x);
+        if x > 0.01
+        {
+            //shape.texture(to: CGSize(width: 1, height: 1))
+        }
+        else if(x < 0.01)
+        {
+            //shape.scale(to: CGSize(width: -1, height: 1))
+        }
     }
     
     func Jump()
     {
         if(m_isGrounded)
         {
-        m_isGrounded = false;
-        shape.physicsBody?.applyImpulse(CGVector(dx: CGFloat(0), dy: CGFloat(200)))
+            
+            //audioNode.run(SKAction.play());
+            m_isGrounded = false;
+            shape.physicsBody?.applyImpulse(CGVector(dx: CGFloat(0), dy: CGFloat(200)))
         }
+        
+    }
+    
+    func Update()
+    {
         
     }
 
     func ReturnShape() -> SKSpriteNode
     {
         return shape;
+    }
+    
+    func respawn()
+    {
+        shape.position = m_respawnPosition;
     }
     
     func Update(dt: Float)
@@ -83,5 +110,23 @@ class player:SKNode {
             m_isGrounded = true;
         }
         camera.position = shape.position;
+        
+        var bodies = body.allContactedBodies();
+        
+        for body in bodies
+        {
+            if(body.node?.name == "Damage")
+            {
+                //sendMessage(msg: "Hurt")
+                hud.hurt();
+                respawn();
+            }
+            
+            if(body.node?.name == "Coin")
+            {
+                hud.increaseScore();
+                body.node?.removeFromParent();
+            }
+        }
     }
 }

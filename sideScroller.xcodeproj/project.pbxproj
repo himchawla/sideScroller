@@ -10,6 +10,7 @@
 		34DE02512676EF10002A208F /* AnimationTiles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 34DE02502676EF10002A208F /* AnimationTiles.sks */; };
 		932ED7AD2688E8520051D996 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED7AC2688E8520051D996 /* Camera.swift */; };
 		932ED7AF2688F36D0051D996 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932ED7AE2688F36D0051D996 /* HUD.swift */; };
+		935D1B48268DD68B0039EDF3 /* Magic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 935D1B47268DD68B0039EDF3 /* Magic.sks */; };
 		93672A412673A3A5004A8855 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A402673A3A5004A8855 /* AppDelegate.swift */; };
 		93672A432673A3A5004A8855 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93672A422673A3A5004A8855 /* GameScene.sks */; };
 		93672A452673A3A5004A8855 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93672A442673A3A5004A8855 /* Actions.sks */; };
@@ -19,6 +20,10 @@
 		93672A4E2673A3A8004A8855 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93672A4D2673A3A8004A8855 /* Assets.xcassets */; };
 		93672A592673A3A9004A8855 /* sideScrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A582673A3A9004A8855 /* sideScrollerTests.swift */; };
 		93672A642673A3A9004A8855 /* sideScrollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93672A632673A3A9004A8855 /* sideScrollerUITests.swift */; };
+		936E03CD268D961F0052B54C /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 936E03CC268D961E0052B54C /* left.png */; };
+		936E03CF268DA49F0052B54C /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 936E03CE268DA49E0052B54C /* right.png */; };
+		936E03D1268DA9720052B54C /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 936E03D0268DA9720052B54C /* Audio */; };
+		936E03D4268DAD590052B54C /* Loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 936E03D3268DAD590052B54C /* Loop.wav */; };
 		93B0E0722673A81300A58E36 /* TileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 93B0E0712673A81300A58E36 /* TileSet.sks */; };
 		93B0E0742673B17400A58E36 /* inputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0E0732673B17400A58E36 /* inputManager.swift */; };
 		93B0E0762673B2F200A58E36 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93B0E0752673B2F200A58E36 /* Player.swift */; };
@@ -45,6 +50,7 @@
 		34DE02502676EF10002A208F /* AnimationTiles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnimationTiles.sks; sourceTree = "<group>"; };
 		932ED7AC2688E8520051D996 /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		932ED7AE2688F36D0051D996 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		935D1B47268DD68B0039EDF3 /* Magic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Magic.sks; sourceTree = "<group>"; };
 		93672A3D2673A3A5004A8855 /* sideScroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sideScroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93672A402673A3A5004A8855 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93672A422673A3A5004A8855 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -60,6 +66,11 @@
 		93672A5F2673A3A9004A8855 /* sideScrollerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sideScrollerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93672A632673A3A9004A8855 /* sideScrollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sideScrollerUITests.swift; sourceTree = "<group>"; };
 		93672A652673A3A9004A8855 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		936E03CC268D961E0052B54C /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = left.png; path = sideScroller/left.png; sourceTree = "<group>"; };
+		936E03CE268DA49E0052B54C /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = right.png; path = sideScroller/right.png; sourceTree = "<group>"; };
+		936E03D0268DA9720052B54C /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
+		936E03D2268DAD210052B54C /* Jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Jump.wav; sourceTree = "<group>"; };
+		936E03D3268DAD590052B54C /* Loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Loop.wav; sourceTree = "<group>"; };
 		93B0E0712673A81300A58E36 /* TileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TileSet.sks; sourceTree = "<group>"; };
 		93B0E0732673B17400A58E36 /* inputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputManager.swift; sourceTree = "<group>"; };
 		93B0E0752673B2F200A58E36 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -93,6 +104,10 @@
 		93672A342673A3A5004A8855 = {
 			isa = PBXGroup;
 			children = (
+				936E03D3268DAD590052B54C /* Loop.wav */,
+				936E03CC268D961E0052B54C /* left.png */,
+				936E03CE268DA49E0052B54C /* right.png */,
+				936E03D2268DAD210052B54C /* Jump.wav */,
 				93672A3F2673A3A5004A8855 /* sideScroller */,
 				93672A572673A3A9004A8855 /* sideScrollerTests */,
 				93672A622673A3A9004A8855 /* sideScrollerUITests */,
@@ -113,6 +128,7 @@
 		93672A3F2673A3A5004A8855 /* sideScroller */ = {
 			isa = PBXGroup;
 			children = (
+				936E03D0268DA9720052B54C /* Audio */,
 				93672A402673A3A5004A8855 /* AppDelegate.swift */,
 				93672A422673A3A5004A8855 /* GameScene.sks */,
 				93B0E0712673A81300A58E36 /* TileSet.sks */,
@@ -127,6 +143,7 @@
 				93B0E0752673B2F200A58E36 /* Player.swift */,
 				932ED7AC2688E8520051D996 /* Camera.swift */,
 				932ED7AE2688F36D0051D996 /* HUD.swift */,
+				935D1B47268DD68B0039EDF3 /* Magic.sks */,
 			);
 			path = sideScroller;
 			sourceTree = "<group>";
@@ -252,11 +269,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				936E03D1268DA9720052B54C /* Audio in Resources */,
 				93672A4C2673A3A5004A8855 /* Main.storyboard in Resources */,
 				93672A432673A3A5004A8855 /* GameScene.sks in Resources */,
+				935D1B48268DD68B0039EDF3 /* Magic.sks in Resources */,
+				936E03CF268DA49F0052B54C /* right.png in Resources */,
 				93672A4E2673A3A8004A8855 /* Assets.xcassets in Resources */,
 				34DE02512676EF10002A208F /* AnimationTiles.sks in Resources */,
+				936E03D4268DAD590052B54C /* Loop.wav in Resources */,
 				93672A452673A3A5004A8855 /* Actions.sks in Resources */,
+				936E03CD268D961F0052B54C /* left.png in Resources */,
 				93B0E0722673A81300A58E36 /* TileSet.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA996MYYKU;
 				INFOPLIST_FILE = sideScroller/Info.plist;
@@ -478,7 +500,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZA996MYYKU;
 				INFOPLIST_FILE = sideScroller/Info.plist;
