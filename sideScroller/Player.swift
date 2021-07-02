@@ -98,6 +98,9 @@ class player:SKNode {
     
     func Update(dt: Float)
     {
+        
+        shape
+        
         guard let vel:CGFloat = shape.physicsBody?.velocity.dy else {
             return
         }
@@ -117,16 +120,14 @@ class player:SKNode {
         {
             if(body.node?.name == "Damage")
             {
-                //sendMessage(msg: "Hurt")
                 hud.hurt();
                 respawn();
             }
+        
             
-            if(body.node?.name == "Coin")
-            {
-                hud.increaseScore();
-                body.node?.removeFromParent();
-            }
+               
+                
+            
         }
     }
 }
