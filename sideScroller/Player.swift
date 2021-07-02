@@ -16,6 +16,8 @@ class player:SKNode {
     
     public var m_respawnPosition = CGPoint(x: 1266.001, y: 585)
 
+    var animateLeft:SKAction!
+    var animateRight:SKAction!
     
     var shape:SKSpriteNode!;
     var body:SKPhysicsBody!;
@@ -52,6 +54,24 @@ class player:SKNode {
         shape.physicsBody?.allowsRotation = false;
         shape.physicsBody?.friction = 0;
         shape.physicsBody?.mass = 0.2;
+        
+        var texLeft:[SKTexture] = []
+        
+        for i in 0...5
+        {
+            texLeft.append(SKTexture(imageNamed: "tile20\(i)"))
+        }
+
+        animateLeft = SKAction.animate(with: texLeft, timePerFrame: 0.2)
+        
+        var texRight:[SKTexture] = []
+        
+        for i in 0...5
+        {
+            texRight.append(SKTexture(imageNamed: "tile00\(i)"))
+        }
+        animateRight = SKAction.animate(with: texRight, timePerFrame: 0.2)
+
         body = shape.physicsBody;
         return shape;
     }
@@ -59,13 +79,29 @@ class player:SKNode {
     func move(x: Float,y: Float)
     {
         shape.physicsBody?.velocity.dx = CGFloat(x);
-        if x > 0.01
+        if x < -0.1
         {
+            shape.removeAction(forKey: "right")
+            shape.run(SKAction.repeatForever(animateLeft), withKey: "left")
             //shape.texture(to: CGSize(width: 1, height: 1))
         }
-        else if(x < 0.01)
+        else if(x > 0.1)
         {
-            //shape.scale(to: CGSize(width: -1, height: 1))
+            shape.removeAction(forKey: "left")
+            shape.run(SKAction.repeatForever(animateRight), withKey: "right")
+        }
+        else
+        {
+            if shape.action(forKey: "right") != nil
+            {
+                shape.run(SKAction.animate(with: [SKTexture(imageNamed: "tile000")], timePerFrame: 0))
+                shape.removeAction(forKey: "right")
+            }
+            if shape.action(forKey: "left") != nil
+            {
+                shape.run(SKAction.animate(with: [SKTexture(imageNamed: "tile200")], timePerFrame: 0))
+                shape.removeAction(forKey: "left")
+            }
         }
     }
     
@@ -99,7 +135,7 @@ class player:SKNode {
     func Update(dt: Float)
     {
         
-        shape
+        
         
         guard let vel:CGFloat = shape.physicsBody?.velocity.dy else {
             return
